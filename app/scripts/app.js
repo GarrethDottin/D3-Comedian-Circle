@@ -10,7 +10,8 @@
  */
 
 angular.module('d3', []);
-angular.module('myApp.directives',  ['d3'])
+angular.module('comedianCircleApp.directives',  ['d3']);
+
 angular
   .module('comedianCircleApp', [
     'd3',
@@ -20,7 +21,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch', 
-    'myApp.directives'
+    'comedianCircleApp.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -43,3 +44,4 @@ angular
         redirectTo: '/'
       });
   });
+
