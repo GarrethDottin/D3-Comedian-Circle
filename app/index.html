@@ -11,25 +11,20 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.scss">
+    <link rel="stylesheet" href="styles/main.css">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.6.2.min.js"></script> 
+    <script type="text/javascript" src="/scripts/jquery.tipsy.js"></script>
     <!-- endbuild -->
   </head>
+  <header> <div class="glyphicon glyphicon-unchecked"></div> <h2> Comedy Circle </h2> <a href="https://twitter.com/garreth_dottin" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false" data-dnt="true">Follow @garreth_dottin</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </header>
   <body ng-app="comedianCircleApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-          </div>
-
-
-      </div>
-    </div>
 
     <div class="container">
     <div ng-view=""></div>

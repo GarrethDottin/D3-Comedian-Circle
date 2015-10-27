@@ -18,18 +18,15 @@ angular.module('comedianCircleApp.directives')
       }, 
       link: function (scope) {
       		var	moneyDataSet = [];
-      		var positionalData = [[250,250,"Jerry Seinfeld" ], [100, 400,"Terry Fator" ], [100, 140, "Russell Peters"], [300, 105, "Jeff Dunham"], [380, 220,"Louis CK" ], [140, 250,"Kevin Hart" ], [240, 380,"Larry Cable Guy" ], [340, 420," George Lopez" ], [45, 45,"Daniel Tosh" ], [50, 250, "Gabriel Inglesia"],  [400, 40, "Ron White"]];
-
-			angular.forEach(scope.comedians, function (key,value) {
-			   moneyDataSet.push(key);
-			});
-
+      		var positionalData = [[250,250,"Seinfeld", 32, 237.5, '#649ACE', "white" ], [100, 400,"Fator", 24, 390, "#9B1F45", "white" ], [100, 140, "Peters", 21, 125, '#3B5CC2', "white"], [300, 105, "Dunham", 19, 90, "#E8C1D6", "white" ], [380, 220,"CK", 16, 212, "#224350", "white" ], [140, 250,"Hart", 14, 240, "#76107f" , "white"], [240, 380,"Cable Guy", 13, 359 , "#D7E9E7" , "white"], [340, 420,"Lopez", 12 , 407, "#66AADD", "white"], [45, 45,"Tosh", 11, 32, "#D46A51", "white" ], [50, 250, "Inglesia", 11, 235, "#889999", "white"],  [400, 40, "White", 10, 28, "#2F752F" , "white"]];
 
 			scope.render = function () { 
       			var margin = {top: 40, right: 40, bottom: 40, left: 40};
 				var yPositionCounter = 0; 
 				var xPositionCounter = 0;
-				
+				var yPositionCounter2 = 0; 
+				var xPositionCounter2 = 0;
+
 	      		var attrSVG = d3.select('#comedianGraph')
 	      			.style("display", "inline-block")
 	      			.attr("width", 500)
@@ -39,32 +36,19 @@ angular.module('comedianCircleApp.directives')
 	      			.append('svg')
 	      			.classed("scatterplot", true)
 		      		.attr("width", 500)
-					.attr("height", 500);
+					.attr("height", 450)
+					.style("border", "solid 2px grey")
+					.style("border-radius", "2px")
+
 
 				var circles = svg.selectAll("g")
-					.data(moneyDataSet)
+					.data(positionalData)
 					.enter()
 					.append("g");
 
-
-				circles
-					.append("text")
-					.text("finding")
-					.attr("cy", function (d) {
-						var yPosition = positionalData[yPositionCounter][0];
-						yPositionCounter++;
-						return yPosition; 
-					})
-					.attr("cx", function () { 
-						var xPosition = positionalData[xPositionCounter][1];
-						xPositionCounter++;
-						return xPosition;
-					})
-
-
 				var circleAttributes = circles.append("circle")
 					.attr("r", function (d) {
-						var radius = d * 2;
+						var radius = d[3] * 2;
 						return radius;
 					})
 					.attr("cy", function (d) {
@@ -77,8 +61,27 @@ angular.module('comedianCircleApp.directives')
 						xPositionCounter++;
 						return xPosition;
 					})
-					.attr("fill", "grey")
-					.text("testing")
+					.attr("fill", function colorSetter (d) { 
+						return d[5];
+					})
+
+				circles
+					.append("text")
+					.attr("font-size", "10")
+					.attr("fill", function(d) { 
+						return d[6];
+					})
+					.text(function(d) { 
+						return d[2];
+
+					})
+					.attr("dy", function (d) {
+						return d[0]; 
+					})
+					.attr("dx", function (d) { 
+						
+						return d[4];
+					})
 	
 			}
 			scope.render();
