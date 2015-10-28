@@ -16,12 +16,14 @@ angular
   .module('comedianCircleApp', [
     'd3',
     'ngAnimate',
+    'ui.bootstrap',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch', 
-    'comedianCircleApp.directives'
+    'comedianCircleApp.directives', 
+    '720kb.tooltips'
   ])
   .config(function ($routeProvider) {
     $routeProvider

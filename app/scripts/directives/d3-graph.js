@@ -7,7 +7,7 @@
  * # d3Graph
  */
 angular.module('comedianCircleApp.directives')
-.directive('d3Graph', ['d3',  function (d3) {
+.directive('d3Graph', ['d3', '$compile',  function (d3) {
     return {
       scope: {}, 
       controller: function ($scope) { 
@@ -37,15 +37,13 @@ angular.module('comedianCircleApp.directives')
 	      			.classed("scatterplot", true)
 		      		.attr("width", 500)
 					.attr("height", 450)
-					.style("border", "solid 2px grey")
-					.style("border-radius", "2px")
+					.style("border", "solid 1px grey")
 
 
 				var circles = svg.selectAll("g")
 					.data(positionalData)
 					.enter()
-					.append("g");
-
+					.append("g")
 				var circleAttributes = circles.append("circle")
 					.attr("r", function (d) {
 						var radius = d[3] * 2;
@@ -67,6 +65,10 @@ angular.module('comedianCircleApp.directives')
 
 				circles
 					.append("text")
+					.attr("tooltip-append-to-body", true)
+                 	.attr("tooltip", function(d){
+                    	return 'test';
+                 	})
 					.attr("font-size", "10")
 					.attr("fill", function(d) { 
 						return d[6];

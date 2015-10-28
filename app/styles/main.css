@@ -32,13 +32,18 @@ header {
   border-bottom: solid 1px grey;
 }
 
+#comedianGraph { 
+  display: inline-block;
+  margin-left: 55px;
+  margin-top: 100px;
+}
 
 #scatterplot { 
   margin-top: 100px;
   background-color: white;
   margin-left: 50px;
   margin-bottom: 25px;
-}
+  border-bottom: solid 1px grey; 
 }
 
 header h2 { 
@@ -56,6 +61,12 @@ header h2 {
   position: fixed !important;
   right: 50px;
   top: 15px;
+  height: 35px;
+}
+
+#follow-button  { 
+  background-image: url(http://imgur.com/vFLn5sB) !important;
+  background-color: purple !important;
 }
 
 #twitter-widget-0 span { 
@@ -67,56 +78,71 @@ header h2 {
 }
 
 
-#follow-button { 
-  -webkit-user-select: none;
-background-color: rgb(53, 122, 232);
-background-image: -webkit-linear-gradient(top, rgb(77, 144, 254), rgb(53, 122, 232));
-border-bottom-color: rgb(47, 91, 183);
-border-bottom-left-radius: 2px;
-border-bottom-right-radius: 2px;
-border-bottom-style: solid;
-border-bottom-width: 0.909091px;
-border-image-outset: 0px;
-border-image-repeat: stretch;
-border-image-slice: 100%;
-border-image-source: none;
-border-image-width: 1;
-border-left-color: rgb(47, 91, 183);
-border-left-style: solid;
-border-left-width: 0.909091px;
-border-right-color: rgb(47, 91, 183);
-border-right-style: solid;
-border-right-width: 0.909091px;
-border-top-color: rgb(47, 91, 183);
-border-top-left-radius: 2px;
-border-top-right-radius: 2px;
-border-top-style: solid;
-border-top-width: 0.909091px;
-box-shadow: none;
-color: rgb(255, 255, 255);
-cursor: default;
-display: inline-block;
-font-family: arial, sans-serif;
-font-size: 11px;
-font-style: normal;
-font-variant: normal;
-font-weight: bold;
-height: 23.9915px;
-line-height: 27px;
-margin-right: 0px;
-min-width: 54px;
-outline-color: rgb(255, 255, 255);
-outline-style: none;
-outline-width: 0px;
-padding-bottom: 3px;
-padding-left: 8px;
-padding-right: 8px;
-padding-top: 0px;
-position: relative;
-text-align: center;
-vertical-align: middle;
-white-space: nowrap;
-width: 53.9915px;
-z-index: 1;
+#twitter-follow { 
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-user-select: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(52, 73, 94);
+    background-image: none;
+    background-origin: padding-box;
+    background-size: auto;
+    border-bottom-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(255, 255, 255);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(255, 255, 255);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(255, 255, 255);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-top-style: none;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    font-family: Blender, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    height: 40px;
+    line-height: 25.007px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 19px;
+    padding-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition-delay: 0s, 0s, 0s;
+    transition-duration: 0.25s, 0.25s, 0.25s;
+    transition-property: border, color, background-color;
+    transition-timing-function: linear, linear, linear;
+    vertical-align: middle;
+    white-space: normal;
+    width: 150px;
+}
+
+#twitter-text { 
+  display: inline-block;
+}
+
+#twitter-icon { 
+  display: inline-block; 
+  height: 37px;
+}
+span#l { 
+  color: purple !important;
+ height: 31px;
 }
 

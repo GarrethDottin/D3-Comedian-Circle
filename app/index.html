@@ -8,12 +8,15 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-tooltips/dist/angular-tooltips.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <!-- build:css(.tmp) styles/tipsy.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/angular-tooltips.css">
+
     <script type="text/javascript" src="//code.jquery.com/jquery-1.6.2.min.js"></script> 
-    <script type="text/javascript" src="/scripts/jquery.tipsy.js"></script>
     <!-- endbuild -->
   </head>
   <header> <div class="glyphicon glyphicon-unchecked"></div> <h2> Comedy Circle </h2> <a href="https://twitter.com/garreth_dottin" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false" data-dnt="true">Follow @garreth_dottin</a>
@@ -31,8 +34,7 @@
     </div>
 
     <div class="footer">
-      <div class="container">
-      </div>
+
     </div>
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -40,12 +42,14 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-tooltips/dist/angular-tooltips.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
